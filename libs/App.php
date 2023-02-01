@@ -45,7 +45,6 @@ class App
         if (file_exists($file)) {
             require $file;
             $this->_controller = new $this->_url[0];
-            // $this->_controller->index();
             $this->_controller->loadModel($this->_url[0]);
             return true;
         } else {
